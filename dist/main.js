@@ -1,1 +1,0 @@
-(()=>{"use strict";const t=new class{constructor(t,s){this.title=t,this.Todo=s}},s=new class{constructor(t,s,o,i){this.title=t,this.description=s,this.dueDate=o,this.priority=i}};console.log(s),console.log(t)})();
