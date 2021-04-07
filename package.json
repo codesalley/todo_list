@@ -6,10 +6,10 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack",
-    "watch": "--watch"
+    "watch": "webpack --watch"
   },
   "keywords": [],
-  "author": "",
+  "author": "codesalley",
   "license": "ISC",
   "devDependencies": {
     "css-loader": "^5.2.0",
