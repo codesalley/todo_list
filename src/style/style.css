@@ -103,7 +103,7 @@ ul {
   padding: 5px 15px;
   border-radius: 10px;
   background-color: rgba(255, 0, 0, 0.445);
-  transition: 700ms ease-in;
+  transition: 400ms linear;
 }
 
 .project-item .urgent {
@@ -233,4 +233,16 @@ ul {
     hsla(187, 100%, 89%, 1) 100%
   );
   filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#595CFF", endColorstr="#C6F8FF", GradientType=1 );
+}
+
+.form-group {
+  display: none;
+}
+
+.form-group-show {
+  display: none;
+}
+
+.main-body-hide {
+  display: none;
 }
