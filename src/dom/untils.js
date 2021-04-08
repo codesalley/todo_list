@@ -4,13 +4,16 @@ import renderTodos from "./renderTodos";
 import renderProjects from "./renderProjects";
 import groupTodo from "./projectTodo";
 import _ from "lodash";
+import format from "date-fns/format";
 function clickHandler() {
   const btn = document.querySelectorAll(".project-item");
   btn.forEach((e) =>
     e.addEventListener("click", () => {
       if (e.classList.contains("all-project")) {
+        shoeListView();
         renderProjects();
       } else if (e.classList.contains("all-todos")) {
+        shoeListView();
         renderTodos();
       }
     })
@@ -38,4 +41,26 @@ function delteTodo() {
   });
 }
 
-export { clickHandler, projetsClick, delteTodo };
+(() => {
+  const time = document.querySelector(".today");
+  const currentTime = document.createElement("p");
+  const today = document.createElement("p");
+  today.classList.add("currentDay");
+  currentTime.classList.add("currentTime");
+  today.innerText = format(new Date(), "LLL d ");
+  currentTime.innerText = format(new Date(), "H ss ");
+  time.appendChild(currentTime);
+  time.appendChild(today);
+})();
+
+function shoeListView() {
+  const list = document.querySelector('.list-view');
+  const productForm = document.querySelector('.project-form');
+  const todoForm = document.querySelector('.todo-form');
+  list.classList.contains('hide-form') ? list.classList.remove('hide-form') : false;
+  productForm.classList.add('hide-form');
+  todoForm.classList.add('hide-form');
+
+}
+
+export { clickHandler, projetsClick, delteTodo, shoeListView };

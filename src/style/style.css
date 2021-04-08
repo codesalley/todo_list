@@ -22,7 +22,7 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  padding: 10% 3%;
+  padding: 10% 2%;
 }
 
 .main-body {
@@ -65,36 +65,6 @@ ul {
   gap: 10px;
 }
 
-.card {
-  background-color: rgba(211, 211, 211, 0.377);
-  padding: 10px 20px;
-  border-radius: 5px;
-}
-
-.card .heading {
-  font-size: 15px;
-  font-weight: 600;
-  color: rgba(0, 0, 0, 0.699);
-}
-
-.child-card {
-  padding: 10px 0;
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-}
-
-.child-card h3 {
-  color: gray;
-  letter-spacing: 3px;
-}
-
-.child-card .title {
-  font-size: 20px;
-  font-weight: bold;
-  color: rgba(0, 0, 0, 0.712);
-}
-
 .action-btn button {
   padding: 5px 15px;
   border: 1px solid rgba(255, 0, 0, 0.445);
@@ -108,7 +78,8 @@ ul {
   transition: 400ms linear;
 }
 
-.project-item .urgent {
+.urgent {
+  align-self: center;
   color: hsla(333, 100%, 53%, 1);
   color: linear-gradient(
     90deg,
@@ -128,115 +99,6 @@ ul {
   filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#FF0F7B", endColorstr="#F89B29", GradientType=1 );
 }
 
-.project-item .normal {
-  color: hsla(152, 100%, 50%, 1);
-  color: linear-gradient(
-    90deg,
-    hsla(152, 100%, 50%, 1) 0%,
-    hsla(186, 100%, 69%, 1) 100%
-  );
-  color: -moz-linear-gradient(
-    90deg,
-    hsla(152, 100%, 50%, 1) 0%,
-    hsla(186, 100%, 69%, 1) 100%
-  );
-  color: -webkit-linear-gradient(
-    90deg,
-    hsla(152, 100%, 50%, 1) 0%,
-    hsla(186, 100%, 69%, 1) 100%
-  );
-  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#00FF87", endColorstr="#60EFFF", GradientType=1 );
-}
-
-.project-item .important {
-  color: hsla(239, 100%, 67%, 1);
-  color: linear-gradient(
-    90deg,
-    hsla(239, 100%, 67%, 1) 0%,
-    hsla(187, 100%, 89%, 1) 100%
-  );
-  color: -moz-linear-gradient(
-    90deg,
-    hsla(239, 100%, 67%, 1) 0%,
-    hsla(187, 100%, 89%, 1) 100%
-  );
-  color: -webkit-linear-gradient(
-    90deg,
-    hsla(239, 100%, 67%, 1) 0%,
-    hsla(187, 100%, 89%, 1) 100%
-  );
-  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#595CFF", endColorstr="#C6F8FF", GradientType=1 );
-}
-
-.child-card .urgent::before {
-  content: " ";
-  width: 40px;
-  height: 5px;
-  background: hsla(333, 100%, 53%, 1);
-  background: linear-gradient(
-    90deg,
-    hsla(333, 100%, 53%, 1) 0%,
-    hsla(33, 94%, 57%, 1) 100%
-  );
-  background: -moz-linear-gradient(
-    90deg,
-    hsla(333, 100%, 53%, 1) 0%,
-    hsla(33, 94%, 57%, 1) 100%
-  );
-  background: -webkit-linear-gradient(
-    90deg,
-    hsla(333, 100%, 53%, 1) 0%,
-    hsla(33, 94%, 57%, 1) 100%
-  );
-  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#FF0F7B", endColorstr="#F89B29", GradientType=1 );
-}
-
-.project-item .normal::before {
-  content: " ";
-  width: 40px;
-  height: 5px;
-  background: hsla(152, 100%, 50%, 1);
-  background: linear-gradient(
-    90deg,
-    hsla(152, 100%, 50%, 1) 0%,
-    hsla(186, 100%, 69%, 1) 100%
-  );
-  background: -moz-linear-gradient(
-    90deg,
-    hsla(152, 100%, 50%, 1) 0%,
-    hsla(186, 100%, 69%, 1) 100%
-  );
-  background: -webkit-linear-gradient(
-    90deg,
-    hsla(152, 100%, 50%, 1) 0%,
-    hsla(186, 100%, 69%, 1) 100%
-  );
-  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#00FF87", endColorstr="#60EFFF", GradientType=1 );
-}
-
-.project-item .important::before {
-  content: " ";
-  width: 40px;
-  height: 5px;
-  background: hsla(239, 100%, 67%, 1);
-  background: linear-gradient(
-    90deg,
-    hsla(239, 100%, 67%, 1) 0%,
-    hsla(187, 100%, 89%, 1) 100%
-  );
-  background: -moz-linear-gradient(
-    90deg,
-    hsla(239, 100%, 67%, 1) 0%,
-    hsla(187, 100%, 89%, 1) 100%
-  );
-  background: -webkit-linear-gradient(
-    90deg,
-    hsla(239, 100%, 67%, 1) 0%,
-    hsla(187, 100%, 89%, 1) 100%
-  );
-  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#595CFF", endColorstr="#C6F8FF", GradientType=1 );
-}
-
 .form-group {
   display: flex;
   flex-direction: column;
@@ -245,7 +107,6 @@ ul {
 
 .form-group button {
   padding: 5px;
-
 }
 
 input {
@@ -254,23 +115,114 @@ input {
   border-color: gray;
 }
 
-.main-body-form {
-  display: none;
-}
-
-.main-body-form-show {
+.show-form {
   display: block;
 }
 
-.main-body-hide {
+.hide-form {
   display: none;
 }
 
-.project-form {
-  display: none;
+.currentTime {
+  font-size: 30px;
+  font-weight: 200;
+  color: #60efff;
 }
-.project-form-show {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+.currentDay {
+  font-size: 22px;
+  font-weight: 200;
+  color: #c6f8ff;
+  text-align: center;
+}
+
+.todo-item {
+  background-color: #32c4bf23;
+  border-radius: 10px;
+  padding: 20px 30px;
+  position: relative;
+  width: 320px;
+}
+
+.todo-item h2 {
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.todo-item p {
+  font-weight: 600;
+  font-size: 14px;
+  opacity: 0.5;
+}
+
+.remove-btn {
+  padding: 5px 10px;
+  border-radius: 5px;
+  border-width: 1;
+  border-color: #8364e8ab;
+  opacity: 0.7;
+  cursor: pointer;
+}
+
+.Low::before {
+  content: '';
+  background-color: #8364e8;
+  border-radius: 20px;
+  width: 10px;
+  height: 80%;
+  position: absolute;
+  left: 2%;
+}
+
+.Medium::before {
+  content: '';
+  background-color: #32c4c0;
+  border-radius: 20px;
+  width: 10px;
+  height: 80%;
+  position: absolute;
+  left: 2%;
+}
+
+.High::before {
+  content: '';
+  background-color: #ea5459;
+  border-radius: 20px;
+  width: 10px;
+  height: 80%;
+  position: absolute;
+  left: 2%;
+}
+
+.project-lists {
+  background-color: #32c4bf23;
+  padding: 15px;
+  border-radius: 10px;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.project-lists h4{
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.project-item {
+  cursor: pointer;
+}
+
+@media screen and (min-width: 676px ) {
+  .list-view {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .main-body {
+    padding: 20px;
+    margin: 0 auto;
+    overflow: scroll;
+  }
+  .side-bar {
+    padding: 20px 20px;
+    margin: 0;
+    height: 100vh;
+  }
 }

@@ -4,9 +4,9 @@ import { format, compareAsc } from "date-fns";
 
 export default function createNewTodo() {
   const addButton = document.getElementById("addTodo");
-  const addTodoForm = document.querySelector(".main-body-form");
   const form = document.querySelector(".form-group");
   const mainContent = document.querySelector(".list-view");
+  const todoForm = document.querySelector(".todo-form");
   const projectForm = document.querySelector(".project-form");
 
   // form element
@@ -27,17 +27,17 @@ export default function createNewTodo() {
   };
 
   addButton.addEventListener("click", () => {
-    if (mainContent.classList.contains("main-body-hide")) {
-      mainContent.classList.remove("main-body-hide");
-      mainContent.classList.add("list-view");
-      addTodoForm.classList.remove("main-body-form-show");
-      addTodoForm.classList.add("main-body-form");
+    !projectForm.classList.contains('hide-form') ?  projectForm.classList.add('hide-form') : false;
+    if (todoForm.classList.contains("hide-form")) {
+      mainContent.classList.add('hide-form');
+      todoForm.classList.remove('hide-form');
+      todoForm.classList.add('show-form');
+
     } else {
-      projectForm.classList.remove("project-form-show");
-      mainContent.classList.add("main-body-hide");
-      mainContent.classList.remove("list-view");
-      addTodoForm.classList.add("main-body-form-show");
-      addTodoForm.classList.remove("main-body-form");
+      mainContent.classList.remove('hide-form');
+      todoForm.classList.remove('show-form');
+      todoForm.classList.add('hide-form');
+
     }
   });
 
@@ -55,9 +55,5 @@ export default function createNewTodo() {
     } else {
       e.preventDefault();
     }
-
-    // if(checkInput(todoTitle.nodeValue, todoDueDate.value)) {
-    //   createTodo(todoTitle.value, todoDescription.value, );
-    // }
   });
 }
