@@ -1,29 +1,32 @@
 // middleware integration
 
-import newProject from "../middleware/project";
-import { storage, updateStorage } from "../middleware/storage";
+import newProject from '../middleware/project';
+
+
 export default function createProject() {
-  const form = document.querySelector(".project-form");
-  
-  const addProject = document.getElementById("addProject");
+  const form = document.querySelector('.project-form');
+
+  const addProject = document.getElementById('addProject');
   const todoForm = document.querySelector('.todo-form');
   const projectForm = document.querySelector('.project-form');
-  const mainContent = document.querySelector(".list-view");
+  const mainContent = document.querySelector('.list-view');
 
   // form input   /
-  const projectTitle = document.querySelector("#project");
+  const projectTitle = document.querySelector('#project');
 
   // create project function
   const createNewProject = (title) => {
-    if (title !== "") {
+    if (title !== '') {
       return true;
-    } else {
-      return false;
     }
+    return false;
   };
 
-  addProject.addEventListener("click", () => {
-    !todoForm.classList.contains('hide-form') ?  todoForm.classList.add('hide-form') : false;
+  addProject.addEventListener('click', () => {
+    // eslint-disable-next-line no-unused-expressions
+    !todoForm.classList.contains('hide-form')
+      ? todoForm.classList.add('hide-form')
+      : false;
     if (projectForm.classList.contains('hide-form')) {
       mainContent.classList.add('hide-form');
       projectForm.classList.remove('hide-form');
@@ -35,7 +38,7 @@ export default function createProject() {
       mainContent.classList.add('show-form');
     }
   });
-  form.addEventListener("submit", (e) => {
+  form.addEventListener('submit', (e) => {
     if (createNewProject(projectTitle.value)) {
       newProject(projectTitle.value);
     } else {

@@ -1,4 +1,4 @@
-import Todo from "./todo";
+import Todo from './todo';
 
 export default class Project {
   constructor(title) {

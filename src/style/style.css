@@ -71,6 +71,10 @@ ul {
   border-radius: 10px;
 }
 
+.form-group button {
+  padding: 5px;
+}
+
 .action-btn button:hover {
   padding: 5px 15px;
   border-radius: 10px;
@@ -81,32 +85,12 @@ ul {
 .urgent {
   align-self: center;
   color: hsla(333, 100%, 53%, 1);
-  color: linear-gradient(
-    90deg,
-    hsla(333, 100%, 53%, 1) 0%,
-    hsla(33, 94%, 57%, 1) 100%
-  );
-  color: -moz-linear-gradient(
-    90deg,
-    hsla(333, 100%, 53%, 1) 0%,
-    hsla(33, 94%, 57%, 1) 100%
-  );
-  color: -webkit-linear-gradient(
-    90deg,
-    hsla(333, 100%, 53%, 1) 0%,
-    hsla(33, 94%, 57%, 1) 100%
-  );
-  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#FF0F7B", endColorstr="#F89B29", GradientType=1 );
 }
 
 .form-group {
   display: flex;
   flex-direction: column;
   gap: 10px;
-}
-
-.form-group button {
-  padding: 5px;
 }
 
 input {
@@ -128,6 +112,7 @@ input {
   font-weight: 200;
   color: #60efff;
 }
+
 .currentDay {
   font-size: 22px;
   font-weight: 200;
@@ -157,7 +142,7 @@ input {
 .remove-btn {
   padding: 5px 10px;
   border-radius: 5px;
-  border-width: 1;
+  border-width: 1px;
   border-color: #8364e8ab;
   opacity: 0.7;
   cursor: pointer;
@@ -166,8 +151,8 @@ input {
 .Low::before {
   content: '';
   background-color: #8364e8;
-  border-radius: 20px;
-  width: 10px;
+  border-radius: 50px;
+  width: 5px;
   height: 80%;
   position: absolute;
   left: 2%;
@@ -176,8 +161,8 @@ input {
 .Medium::before {
   content: '';
   background-color: #32c4c0;
-  border-radius: 20px;
-  width: 10px;
+  border-radius: 50px;
+  width: 5px;
   height: 80%;
   position: absolute;
   left: 2%;
@@ -186,8 +171,8 @@ input {
 .High::before {
   content: '';
   background-color: #ea5459;
-  border-radius: 20px;
-  width: 10px;
+  border-radius: 50px;
+  width: 5px;
   height: 80%;
   position: absolute;
   left: 2%;
@@ -201,7 +186,7 @@ input {
   cursor: pointer;
 }
 
-.project-lists h4{
+.project-lists h4 {
   font-size: 18px;
   font-weight: 400;
 }
@@ -210,16 +195,18 @@ input {
   cursor: pointer;
 }
 
-@media screen and (min-width: 676px ) {
+@media screen and (min-width: 676px) {
   .list-view {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
   }
+
   .main-body {
     padding: 20px;
     margin: 0 auto;
     overflow: scroll;
   }
+
   .side-bar {
     padding: 20px 20px;
     margin: 0;

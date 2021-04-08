@@ -1,9 +1,9 @@
-import Project from "../model/project";
-import { storage, updateStorage } from "./storage";
+import Project from '../model/project';
+import { storage, updateStorage } from './storage';
 
 export default function newProject(title) {
   const project = new Project();
   project.title = title;
-  updateStorage("project", project);
+  updateStorage('project', project);
   return true;
 }
