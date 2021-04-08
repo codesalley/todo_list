@@ -7,6 +7,9 @@ export default function createNewTodo() {
     const form = document.querySelector('form');
     const mainContent = document.querySelector(".list-view");
     const projectForm  =  document.querySelector('.project-form');
+
+    // form element 
+
     
     addButton.addEventListener("click", () => {
       if(mainContent.classList.contains('main-body-hide')){
