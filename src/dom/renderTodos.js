@@ -1,4 +1,5 @@
 import { storage, updateStorage } from "../middleware/storage";
+import {clickHandler, delteTodo} from './untils';
 export default function renderTodos() {
   const projectUl = document.querySelector(".list-view");
   const todoList = document.createDocumentFragment();
@@ -28,5 +29,7 @@ export default function renderTodos() {
     }
   }
   projectUl.innerHTML = '';
-  return projectUl.appendChild(todoList);
+   projectUl.appendChild(todoList);
+   clickHandler();
+   delteTodo();
 }

@@ -5,9 +5,9 @@ import {clickHandler, projetsClick} from './dom/untils';
 import renderProjects from './dom/renderProjects'
 import groupTodo from './dom/projectTodo';
 
-renderProjects();
-// groupTodo('Meetings');
-// renderTodos();
+// renderProjects();
+// // groupTodo('Meetings');
+renderTodos();
 clickHandler()
 projetsClick();
 

@@ -1,5 +1,6 @@
 import { storage, updateStorage } from "../middleware/storage";
 import newProject from "../middleware/project";
+import {clickHandler, projetsClick} from './untils';
 import _ from "lodash";
 export default function renderProjects() {
   const projectUl = document.querySelector(".list-view");
@@ -27,4 +28,7 @@ export default function renderProjects() {
   }
   projectUl.innerHTML = '';
    projectUl.appendChild(mainFragments);
+  
+   projetsClick();
+
 }
