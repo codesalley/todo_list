@@ -1,5 +1,5 @@
 import Project from '../model/project';
-import { storage, updateStorage } from './storage';
+import { updateStorage } from './storage';
 
 export default function newProject(title) {
   const project = new Project();
