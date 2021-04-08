@@ -1,5 +1,6 @@
 // middleware integration
 import newProject from "../middleware/project";
+import { storage, updateStorage } from "../middleware/storage";
 export default function createProject() {
   const form = document.querySelector(".project-form");
   const another = document.querySelector(".todo-form");
