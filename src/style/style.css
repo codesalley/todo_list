@@ -11,6 +11,7 @@
   display: flex;
   height: 100vh;
   overflow: scroll;
+  position: relative;
 }
 
 .side-bar {
@@ -236,11 +237,28 @@ ul {
 }
 
 .form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.form-group button {
+  padding: 5px;
+
+}
+
+input {
+  padding: 10px;
+  border-radius: 5px;
+  border-color: gray;
+}
+
+.main-body-form {
   display: none;
 }
 
-.form-group-show {
-  display: none;
+.main-body-form-show {
+  display: block;
 }
 
 .main-body-hide {
