@@ -14,9 +14,9 @@ function storage(name) {
 
 function updateStorage(db, content) {
     let data = storage(db);
-    console.log(data);
     data.push(content);
     localStorage.setItem(db, JSON.stringify(data));
+    return true;
 };
 
 export { storage, updateStorage };

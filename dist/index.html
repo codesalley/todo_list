@@ -28,15 +28,25 @@
                 <button id="addProject" ><i class="fa fa-plus" aria-hidden="true"></i> Create Project</button>
                 <button id="addTodo"><i class="fa fa-plus" aria-hidden="true"></i> Add Todo</button>
             </div>
-            <div class="main-body-form">
+            <div class="main-body-form todo-form">
                 <form class="form-group">
                     <input type="text" name="title" id="title" placeholder="Todo title">
                     <input type="text" name="description" id="description" placeholder="Todo description">
                     <input type="datetime-local" name="dueDate" id="dueDate">
+                    <select name="prioty" id="prioty">
+                        <option value="None">None</option>
+                        <option value="Low">Low</option>
+                        <option value="Medium">Medium</option>
+                        <option value="High">High</option>
+                    </select>
                     <button type="submit">Add Todo</button>
                     
                 </form>
             </div>
+            <form class="project-form">
+                <input type="text" name="name" id="project">
+                <button type="submit">Create project </button>
+            </form>
             <div class="list-view">
 
                 <div class="card">

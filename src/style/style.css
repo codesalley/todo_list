@@ -264,3 +264,12 @@ input {
 .main-body-hide {
   display: none;
 }
+
+.project-form {
+  display: none;
+}
+.project-form-show {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
