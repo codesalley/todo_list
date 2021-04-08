@@ -13,7 +13,6 @@ export default function createProject() {
   // create project function
   const createNewProject = (title) => {
     if (title !== "") {
-      newProject(title);
       return true;
     } else {
       return false;
@@ -32,8 +31,10 @@ export default function createProject() {
     }
   });
   form.addEventListener("submit", (e) => {
-    e.preventDefault();
-    console.log(projectTitle.value);
-    createNewProject(projectTitle.value);
+    if (createNewProject(projectTitle.value)) {
+      newProject(projectTitle.value);
+    } else {
+      e.preventDefault();
+    }
   });
 }
