@@ -1,5 +1,6 @@
 import { format } from 'date-fns';
 import createTodo from '../middleware/todo';
+import { storage } from '../middleware/storage';
 
 export default function createNewTodo() {
   const addButton = document.getElementById('addTodo');
@@ -7,6 +8,7 @@ export default function createNewTodo() {
   const mainContent = document.querySelector('.list-view');
   const todoForm = document.querySelector('.todo-form');
   const projectForm = document.querySelector('.project-form');
+  const frag = document.createDocumentFragment();
 
   // form element
   const todoTitle = document.querySelector('#title');
@@ -25,6 +27,16 @@ export default function createNewTodo() {
   };
 
   addButton.addEventListener('click', () => {
+    (() => {
+      const db = storage('project');
+      db.forEach((ele) => {
+        const op = document.createElement('option');
+        op.value = ele.title;
+        op.innerText = ele.title;
+        frag.appendChild(op);
+      });
+    })();
+    todoProject.appendChild(frag);
     // eslint-disable-next-line no-unused-expressions
     !projectForm.classList.contains('hide-form') ? projectForm.classList.add('hide-form') : false;
     if (todoForm.classList.contains('hide-form')) {
