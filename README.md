@@ -1,4 +1,4 @@
-# Todo List Allow users to create and manage their task. todo list are grouped in projects. 
+# Todo List Allow users to create and manage their task. todo lists are grouped in projects. 
 
 ![](./ss.png)
 
