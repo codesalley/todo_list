@@ -72,7 +72,14 @@ ul {
 }
 
 .form-group button {
-  padding: 5px;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.project-form button {
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 10px;
 }
 
 .action-btn button:hover {
@@ -103,8 +110,10 @@ input {
   display: block;
 }
 
-.hide-form {
-  display: none;
+#prioty,
+#cat-project {
+  padding: 10px;
+  border-radius: 10px;
 }
 
 .currentTime {
@@ -149,7 +158,7 @@ input {
 }
 
 .Low::before {
-  content: '';
+  content: "";
   background-color: #8364e8;
   border-radius: 50px;
   width: 5px;
@@ -159,7 +168,7 @@ input {
 }
 
 .Medium::before {
-  content: '';
+  content: "";
   background-color: #32c4c0;
   border-radius: 50px;
   width: 5px;
@@ -169,7 +178,7 @@ input {
 }
 
 .High::before {
-  content: '';
+  content: "";
   background-color: #ea5459;
   border-radius: 50px;
   width: 5px;
@@ -211,5 +220,9 @@ input {
     padding: 20px 20px;
     margin: 0;
     height: 100vh;
+  }
+
+  .hide-form {
+    display: none;
   }
 }

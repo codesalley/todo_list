@@ -10,7 +10,9 @@
 - JAVASCRIPT
 - WEBPACK
 
+## Live Demo
 
+- [Live](https://juxsalley.github.io/todo_list/)
 
 # Getting Started
 

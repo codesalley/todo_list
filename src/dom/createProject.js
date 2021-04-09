@@ -24,9 +24,7 @@ export default function createProject() {
 
   addProject.addEventListener('click', () => {
     // eslint-disable-next-line no-unused-expressions
-    !todoForm.classList.contains('hide-form')
-      ? todoForm.classList.add('hide-form')
-      : false;
+    !todoForm.classList.contains('hide-form') ? todoForm.classList.add('hide-form') : false;
     if (projectForm.classList.contains('hide-form')) {
       mainContent.classList.add('hide-form');
       projectForm.classList.remove('hide-form');
