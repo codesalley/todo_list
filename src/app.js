@@ -6,8 +6,8 @@ import { clickHandler, projetsClick } from './dom/untils';
 
 storage('todo');
 storage('project');
-renderTodos();
 clickHandler();
+renderTodos();
 projetsClick();
 
 createProject();
