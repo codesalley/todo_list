@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" href="./src/style/style.css">
+    <title>Todo List</title>
+</head>
+<body>
+    <div class="main">
+        <div class="side-bar">
+            <h2 class="side-bar-heading">Projects</h2>
+            <ul class="projects">
+                <li class="project-item all-project"><i class="fa urgent fa-circle-o" aria-hidden="true"></i> Projects</li>
+                <li class="project-item all-todos"><i class="fa urgent fa-circle-o" aria-hidden="true"></i> Todos</li>
+            </ul>
+            <div class="today">
+
+            </div>
+        </div>
+
+        <div class="main-body">
+            <div class="new-button">
+                <button id="addProject" ><i class="fa fa-plus" aria-hidden="true"></i> Create Project</button>
+                <button id="addTodo"><i class="fa fa-plus" aria-hidden="true"></i> Add Todo</button>
+            </div>
+            <div class="todo-form hide-form">
+                <form class="form-group">
+                    <input type="text" name="title" id="title" placeholder="Todo title">
+                    <input type="text" name="description" id="description" placeholder="Todo description">
+                    <input type="datetime-local" name="dueDate" id="dueDate">
+                    <label for="prioty"> Select prioty</label>
+                    <select name="prioty" id="prioty">
+                        <option value="None">None</option>
+                        <option value="Low">Low</option>
+                        <option value="Medium">Medium</option>
+                        <option value="High">High</option>
+                    </select>
+                    <label for="prioty"> Select project</label>
+                    <select name="prioty" id="cat-project">
+     
+                    </select>
+                    <button type="submit">Add Todo</button>
+                    
+                </form>
+            </div>
+            <form class="project-form hide-form">
+                <label for="project">Project Title </label> <br>
+                <input type="text" name="name" id="project"> <br>
+                <button type="submit">Create project </button>
+            </form>
+            <div class="list-view">
+
+
+            </div>
+        </div>
+    </div>
+    
+
+    <script src="./dist/main.js"></script>
+</body>
+</html>

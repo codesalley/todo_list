@@ -1,0 +1,228 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,600;0,900;1,700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+}
+
+.main {
+  display: flex;
+  height: 100vh;
+  overflow: scroll;
+  position: relative;
+}
+
+.side-bar {
+  background-color: #32394b;
+  height: 100vh;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10% 2%;
+}
+
+.main-body {
+  height: 100vh;
+  width: 70%;
+  margin: auto;
+  overflow: scroll;
+}
+
+li {
+  list-style: none;
+  display: flex;
+  gap: 10px;
+}
+
+ul {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-size: 20px;
+  overflow: scroll;
+}
+
+.new-button {
+  width: 100%;
+  padding: 20px 0;
+}
+
+.new-button button {
+  background-color: teal;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  color: white;
+}
+
+.list-view {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.action-btn button {
+  padding: 5px 15px;
+  border: 1px solid rgba(255, 0, 0, 0.445);
+  border-radius: 10px;
+}
+
+.form-group button {
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.project-form button {
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 10px;
+}
+
+.action-btn button:hover {
+  padding: 5px 15px;
+  border-radius: 10px;
+  background-color: rgba(255, 0, 0, 0.445);
+  transition: 400ms linear;
+}
+
+.urgent {
+  align-self: center;
+  color: hsla(333, 100%, 53%, 1);
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+input {
+  padding: 10px;
+  border-radius: 5px;
+  border-color: gray;
+}
+
+.show-form {
+  display: block;
+}
+
+#prioty,
+#cat-project {
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.currentTime {
+  font-size: 30px;
+  font-weight: 200;
+  color: #60efff;
+}
+
+.currentDay {
+  font-size: 22px;
+  font-weight: 200;
+  color: #c6f8ff;
+  text-align: center;
+}
+
+.todo-item {
+  background-color: #32c4bf23;
+  border-radius: 10px;
+  padding: 20px 30px;
+  position: relative;
+  width: 320px;
+}
+
+.todo-item h2 {
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.todo-item p {
+  font-weight: 600;
+  font-size: 14px;
+  opacity: 0.5;
+}
+
+.remove-btn {
+  padding: 5px 10px;
+  border-radius: 5px;
+  border-width: 1px;
+  border-color: #8364e8ab;
+  opacity: 0.7;
+  cursor: pointer;
+}
+
+.Low::before {
+  content: "";
+  background-color: #8364e8;
+  border-radius: 50px;
+  width: 5px;
+  height: 80%;
+  position: absolute;
+  left: 2%;
+}
+
+.Medium::before {
+  content: "";
+  background-color: #32c4c0;
+  border-radius: 50px;
+  width: 5px;
+  height: 80%;
+  position: absolute;
+  left: 2%;
+}
+
+.High::before {
+  content: "";
+  background-color: #ea5459;
+  border-radius: 50px;
+  width: 5px;
+  height: 80%;
+  position: absolute;
+  left: 2%;
+}
+
+.project-lists {
+  background-color: #32c4bf23;
+  padding: 15px;
+  border-radius: 10px;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.project-lists h4 {
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.project-item {
+  cursor: pointer;
+}
+
+@media screen and (min-width: 676px) {
+  .list-view {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .main-body {
+    padding: 20px;
+    margin: 0 auto;
+    overflow: scroll;
+  }
+
+  .side-bar {
+    padding: 20px 20px;
+    margin: 0;
+    height: 100vh;
+  }
+
+  .hide-form {
+    display: none;
+  }
+}
