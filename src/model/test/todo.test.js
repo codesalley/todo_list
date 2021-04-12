@@ -1,4 +1,4 @@
-import Todo from './todo';
+import Todo from '../../model/todo';
 
 describe('Todo class constructor ', () => {
   test('constructor to accept 5 arguments, keys including[title, decribetion, dueDate, priority, project]', () => {
